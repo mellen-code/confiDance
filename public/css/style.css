@@ -1,0 +1,44 @@
+p {
+    margin: 10px 0 !important;
+}
+
+.login-container {
+    width: 400px;
+    margin-top: 50px;
+    text-align: center
+}
+
+.fa-small {
+    font-size: 16px !important;
+}
+
+.btn-float {
+    float: left;
+    margin-right: 10px;
+}
+
+.img-small {
+    width: 180px;
+}
+
+h5 {
+    margin-top: 2em;
+}
+
+.class-image {
+    height: 100%;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.link-spacing {
+    margin: 0 !important;
+}

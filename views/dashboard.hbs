@@ -1,0 +1,66 @@
+
+<h3>Welcome {{name}}</h3>
+{{!-- <p>Here are your stories</p> --}}
+
+<h5>Activity Tracker</h5>
+    <table>
+        <thead>
+            <tr>
+                <th>This Week</th>
+                <th>Top Week</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {{!-- <td>{{createdAt:$gte:ISODate("March 5th 2023"),$lt:ISODate("February 27th 2023")}}</td> --}}
+                <td>This Weeks Number</td>
+                <td>Top Week Number</td>
+                <td>{{stories.length}} entries</td>
+            </tr>
+        </tbody>
+    </table>
+
+<a href="/goals/edit/" class="btn btn-float">Set Weekly Goals</a>
+
+<a href="/classes/index/" class="btn btn-float">Classes</a>
+
+<h5>My Daily Entries</h5>
+
+{{#if stories}}
+    <table class="striped">
+        <thead>
+            <tr>
+                {{!-- <th>Title</th> --}}
+                <th>Date</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each stories}}
+            <tr>
+                {{!-- <td><a href='/stories/{{_id}}'>{{title}}</a></td> --}}
+                <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
+                <td><span class="dash-status">{{status}}</span></td>
+                <td>
+                    <a href="/stories/edit/{{_id}}" class="btn btn-float">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn red">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    
+{{else}}
+    <p>You have not created any entries</p>
+{{/if}}
