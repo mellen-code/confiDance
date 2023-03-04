@@ -9,6 +9,10 @@ const passport = require('passport')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const connectDB = require('./config/db')
+const classesRoutes = require('./routes/classes')
+const goalsRoutes = require('./routes/goals')
+const indexRoutes = require('./routes/index')
+const entriesRoutes = require('./routes/entries')
 
 // Load config
 dotenv.config({ path: './config/config.env'})
@@ -87,11 +91,11 @@ app.use(function (req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')))
 
 //Routes
-app.use('/', require('./routes/index'))
-app.use('/auth', require('./routes/auth'))
-app.use('/stories', require('./routes/stories'))
-app.use('/goals', require('./routes/goals'))
-app.use('/classes', require('./routes/classes'))
+app.use('/', indexRoutes);
+app.use('/auth', require('./routes/auth'));
+app.use('/entries', entriesRoutes);
+app.use('/goals', goalsRoutes);
+app.use('/classes', classesRoutes);
 
 
 const PORT = process.env.PORT || 3000

@@ -21,9 +21,9 @@
         </tbody>
     </table>
 
-<a href="/goals/edit/" class="btn btn-float">Set Weekly Goals</a>
+<a href="/goals/" class="btn btn-float">Set Weekly Goals</a>
 
-<a href="/classes/index/" class="btn btn-float">Classes</a>
+<a href="/classes/" class="btn btn-float">Classes</a>
 
 <h5>My Daily Entries</h5>
 
@@ -40,15 +40,15 @@
         <tbody>
             {{#each stories}}
             <tr>
-                {{!-- <td><a href='/stories/{{_id}}'>{{title}}</a></td> --}}
+                {{!-- <td><a href='/entries/{{_id}}'>{{title}}</a></td> --}}
                 <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
                 <td><span class="dash-status">{{status}}</span></td>
                 <td>
-                    <a href="/stories/edit/{{_id}}" class="btn btn-float">
+                    <a href="/entries/edit/{{_id}}" class="btn btn-float">
                         <i class="fas fa-edit"></i>
                     </a>
 
-                    <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                    <form action="/entries/{{_id}}" method="POST" id="delete-form">
                         <input type="hidden" name="_method" value="DELETE">
                         <button type="submit" class="btn red">
                             <i class="fas fa-trash"></i>

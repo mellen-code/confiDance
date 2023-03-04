@@ -1,16 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const classesController = require('../controllers/classes')
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
-// @desc Classes
-// @route GET /classes
-router.get('/index', ensureAuth, async (req, res) => {
-    try {
-        res.render('classes/index')
-    } catch (error) {
-        console.error(err)
-        res.render('error/500')
-    } 
-})
+router.get('/index', classesController.getIndex)
 
 module.exports = router

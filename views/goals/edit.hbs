@@ -1,13 +1,13 @@
 <h3>My Weekly Goals</h3>
 <div class="row">
     <form action="/stories" method="post" class="col s12">
-        {{!-- <div class="row">
+        <div class="row">
             <div class="input-field">
                 <input type="text" name="title" id="title">
                 <label for="title">Title</label>
             </div>
-        </div> --}}
-<p>{{entriesGoal}}</p>
+        </div>
+{{!-- <p>{{entriesGoal}}</p> --}}
         <div class="row">
             <div class="input-field">
                 
@@ -21,6 +21,14 @@
                 <label for="status">Select Weekly Entries Goal:</label>
             </div>
         </div>
+
+         <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+
+    </form>
+</div>
 
         {{!-- <div class="row">
             <div class="input-field">
@@ -40,9 +48,5 @@
             </div>
         </div> --}}
 
-        {{!-- <div class="row">
-            <input type="submit" value="Save" class="btn">
-            <a href="/dashboard" class="btn orange">Cancel</a>
-        </div> --}}
-    </form>
-</div>
+       
+ 

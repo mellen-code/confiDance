@@ -24,10 +24,6 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    entriesGoal: {
-        type: Number,
-        default: 0,
-    }
 })
 
 module.exports = mongoose.model('User', UserSchema)

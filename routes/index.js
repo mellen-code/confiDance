@@ -1,38 +1,22 @@
 const express = require('express')
 const router = express.Router()
 const { ensureAuth, ensureGuest } = require('../middleware/auth')
-
-const Story = require('../models/Story')
+const indexController = require('../controllers/index')
 
 // @desc Login/landing page
 // @route GET /
-router.get('/', ensureGuest, (req, res) => {
-    res.render('login', {
-        layout: 'login',
-    })
-})
+router.get('/', indexController.getLogin)
 
 // @desc Dashboard
 // @route GET /dashboard
-router.get('/dashboard', ensureAuth, async (req, res) => {
-    try {
-        const stories = await Story.find({ user: req.user.id }).lean()
-
-        res.render('dashboard', {
-            name: req.user.firstName,
-            stories
-        })
-    } catch (error) {
-        console.error(err)
-        res.render('error/500')
-    }   
-})
+router.get('/dashboard', ensureAuth, indexController.getDashboard)
 
 // @desc Classes
 // @route GET /classes
 router.get('/classes', ensureAuth, async (req, res) => {
     try {
-        res.render('classes')
+        console.log('found it')
+        res.render('classes/index')
     } catch (error) {
         console.error(err)
         res.render('error/500')
