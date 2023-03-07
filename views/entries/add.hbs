@@ -1,18 +1,24 @@
 <h3>Today, I...</h3>
 <div class="row">
     <form action="/entries" method="post" class="col s12">
-        {{!-- <div class="row">
+        <div class="row">
             <div class="input-field">
                 <input type="text" name="title" id="title">
                 <label for="title">Title</label>
             </div>
-        </div> --}}
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <textarea name="body" id="body"></textarea>
+            </div>
+        </div>
 
         <div class="row">
             <div class="input-field">
                 <select name="status" id="status">
-                    <option value="confidence" selected>...brought confidence</option>
-                    <option value="learning">...found a learning opportunity</option>
+                    <option value="private" selected>private</option>
+                    <option value="public">make public</option>
                 </select>
 
                 <label for="status">Choose One:</label>
@@ -20,14 +26,7 @@
         </div>
 
         <div class="row">
-            <div class="input-field">
-                <h5>Describe:</h5>
-                <textarea name="body" id="body"></textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <input type="submit" value="Save" class="btn">
+            <input type="submit" value="Save" class="btn cyan">
             <a href="/dashboard" class="btn orange">Cancel</a>
         </div>
     </form>

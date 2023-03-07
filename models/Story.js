@@ -1,19 +1,19 @@
 const mongoose = require('mongoose')
 
 const StorySchema = new mongoose.Schema({
-    // title: {
-    //     type: String,
-    //     required: true,
-    //     trim: true,
-    // },
+    title: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     body: {
         type: String,
         required: true,
     },
     status: {
         type: String,
-        default: 'confidence',
-        enum: ['confidence', 'learning'],
+        default: 'private',
+        enum: ['private', 'public'],
     },
     user: {
         // pulls the user's unique ID from the database:
@@ -24,8 +24,9 @@ const StorySchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now,
-    }
+        default: Date(),
+    },
+    
 })
 
 module.exports = mongoose.model('Story', StorySchema)

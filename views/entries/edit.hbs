@@ -16,8 +16,8 @@
             <div class="input-field">
                 <select name="status" id="status">
                     {{#select story.status}}
-                    <option value="confidence" selected>...brought confidence</option>
-                    <option value="learning">...found a learning opportunity</option>
+                    <option value="private" selected>private</option>
+                    <option value="public">make public</option>
                     {{/select}}
                 </select>
 
@@ -33,7 +33,7 @@
         </div>
 
         <div class="row">
-            <input type="submit" value="Save" class="btn">
+            <input type="submit" value="Save" class="btn cyan">
             <a href="/dashboard" class="btn orange">Cancel</a>
         </div>
     </form>

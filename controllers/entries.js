@@ -31,7 +31,7 @@ module.exports = {
 // @route GET /stories
     getEntries: async (req, res) => {
     try {
-        const stories = await Story.find()
+        const stories = await Story.find({ status: 'public'})
             .populate('user')
             .sort({ createdAt: 'desc'})
             .lean()
@@ -61,6 +61,7 @@ module.exports = {
         res.render('entries/show', {
             story
         })
+        
     } catch (err) {
         console.error(err)
         res.render('error/404')
@@ -135,7 +136,7 @@ module.exports = {
     try {
         const stories = await Story.find({
             user: req.params.userId,
-            // status: 'public'
+            status: 'public',
         })
         .populate('user')
         .lean()

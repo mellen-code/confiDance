@@ -21,6 +21,13 @@
         </tbody>
     </table>
 
+
+<a href="/entries/add" class="btn btn-float cyan"><i class="fas fa-plus"></i>  Add Entry</a>
+
+{{!-- <div class="fixed-action-btn"></div> --}}
+    {{!-- <a href="/entries/add" class="btn-floating btn-large waves-effect waves-light red"><i class="fas fa-plus"></i></a> --}}
+{{!-- </div> --}}
+
 <a href="/goals/" class="btn btn-float">Set Weekly Goals</a>
 
 <a href="/classes/" class="btn btn-float">Classes</a>
@@ -31,7 +38,7 @@
     <table class="striped">
         <thead>
             <tr>
-                {{!-- <th>Title</th> --}}
+                <th>Title</th>
                 <th>Date</th>
                 <th>Status</th>
                 <th></th>
@@ -40,7 +47,7 @@
         <tbody>
             {{#each stories}}
             <tr>
-                {{!-- <td><a href='/entries/{{_id}}'>{{title}}</a></td> --}}
+                <td><a href='/entries/{{_id}}'>{{title}}</a></td>
                 <td>{{formatDate createdAt 'MMMM Do YYYY'}}</td>
                 <td><span class="dash-status">{{status}}</span></td>
                 <td>
@@ -50,7 +57,7 @@
 
                     <form action="/entries/{{_id}}" method="POST" id="delete-form">
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="submit" class="btn red">
+                        <button type="submit" class="btn orange">
                             <i class="fas fa-trash"></i>
                         </button>
                     </form>
