@@ -42,3 +42,25 @@ h5 {
 .link-spacing {
     margin: 0 !important;
 }
+
+.dash-flex {
+    display: flex;
+    margin: 3rem 0;
+}
+
+.dash-spacing {
+    flex: 2;
+}
+
+.dash-h5 {
+    margin: 0;
+}
+
+.dash-card {
+    padding: 0.5rem 2rem;
+    text-align: center;
+}
+
+.margin-auto {
+    margin: auto !important;
+}

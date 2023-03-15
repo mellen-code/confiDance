@@ -2,7 +2,12 @@
 <h3>Welcome {{name}}</h3>
 {{!-- <p>Here are your stories</p> --}}
 
-<h5>Activity Tracker</h5>
+<div class="dash-flex">
+    <h5 class="dash-h5">Activity Tracker</h5>
+    <div class="dash-spacing"></div>
+    <a href="/goals/" class="btn btn-float">Set Weekly Goals</a>
+</div>
+
     <table>
         <thead>
             <tr>
@@ -21,16 +26,50 @@
         </tbody>
     </table>
 
+<div class="row flex dash-flex">
+    <div class="col s4 margin-auto">
+        <div class="card dash-card">
+            <h3>Entries</h3>
 
-<a href="/entries/add" class="btn btn-float cyan"><i class="fas fa-plus"></i>  Add Entry</a>
+            <div class="section">
+                <p class="lead">My daily accomplishments and lessons learned.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section">
+                <a href="/entries/add" class="btn cyan"><i class="fas fa-plus"></i>Add Entry</a>
+            </div>
+        </div>
+        </div>
+
+
+    <div class="col s4 margin-auto">
+        <div class="card dash-card">
+            <h3>Classes</h3>
+
+            <div class="section">
+                <p class="lead">Short movement classes, for everyone. Repeat and build your dance prowess. Power positivity.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section">
+                <a href="/classes/" class="btn red darken-1">
+                Classes
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 {{!-- <div class="fixed-action-btn"></div> --}}
     {{!-- <a href="/entries/add" class="btn-floating btn-large waves-effect waves-light red"><i class="fas fa-plus"></i></a> --}}
 {{!-- </div> --}}
 
-<a href="/goals/" class="btn btn-float">Set Weekly Goals</a>
 
-<a href="/classes/" class="btn btn-float">Classes</a>
 
 <h5>My Daily Entries</h5>
 
