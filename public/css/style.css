@@ -21,8 +21,8 @@ p {
     width: 180px;
 }
 
-h5 {
-    margin-top: 2em;
+div.container > div.dash-flex > .h3 {
+    margin-top: 0;
 }
 
 .class-image {
@@ -63,4 +63,32 @@ h5 {
 
 .margin-auto {
     margin: auto !important;
+}
+
+h6 {
+    text-align: center;
+}
+
+.page-footer {
+    padding-top: 0;
+}
+
+.truncate {
+    line-height: normal !important;
+}
+
+@media screen and (max-width: 750px) {
+
+    .dash-flex {
+        display: block;
+    }
+
+    .row .col {
+        float: none;
+    }
+
+    body > div.container > div.row.flex.dash-flex > div:nth-child(1), body > div.container > div.row.flex.dash-flex > div:nth-child(2) {
+        width: 85%;
+    }
+
 }
