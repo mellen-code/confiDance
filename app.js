@@ -13,6 +13,7 @@ const classesRoutes = require('./routes/classes')
 const goalsRoutes = require('./routes/goals')
 const indexRoutes = require('./routes/index')
 const entriesRoutes = require('./routes/entries')
+const posturesRoutes = require('./routes/postures')
 
 // Load config
 dotenv.config({ path: './config/config.env'})
@@ -96,6 +97,7 @@ app.use('/auth', require('./routes/auth'));
 app.use('/entries', entriesRoutes);
 app.use('/goals', goalsRoutes);
 app.use('/classes', classesRoutes);
+app.use('/postures', posturesRoutes);
 
 
 const PORT = process.env.PORT || 3000
