@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems);
-    var instance = M.Dropdown.getInstance(elem);
+    let elems = document.querySelectorAll('.dropdown-trigger');
+    let unicorn = M.Dropdown.init(elems);
+    let instance = M.Dropdown.getInstance(elems);
 
     instance.open();
   });

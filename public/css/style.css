@@ -87,7 +87,7 @@ h6 {
         float: none;
     }
 
-    body > div.container > div.row.flex.dash-flex > div:nth-child(1), body > div.container > div.row.flex.dash-flex > div:nth-child(2) {
+    body > div.container > div.row.flex.dash-flex > div:nth-child(1), body > div.container > div.row.flex.dash-flex > div:nth-child(2), body > div.container > div.row.flex.dash-flex > div:nth-child(3) {
         width: 85%;
     }
 
