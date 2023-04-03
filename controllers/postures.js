@@ -13,19 +13,19 @@ module.exports = {
 
     // @desc Show single posture
     // @route GET /postures/:name
-    getConfidence: async (req, res) => {
+    getPosture: async (req, res) => {
+       
         try {
-            const posture = await Posture.findOne({ name: 'confidence'})
+            const name = req.params.value
+            const posture = await Posture.findOne({ name: name})
                 .lean()
-                // lean converts from Mongoose object to json object for Handlebars
-    
-            res.render('postures/confidence', {
+            res.render('postures/pose', {
                 posture
             })
-
-        } catch (err) {
+            console.log(name)
+        } catch (error) {
             console.error(err)
             res.render('error/500')
-        }
+        } 
     },
 }
