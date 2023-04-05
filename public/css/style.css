@@ -31,7 +31,7 @@ div.container > div.dash-flex > .h3 {
 }
 
 .card:hover {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0px 5px 10px 0px #E7CFB1; 
 }
 
 .flex {
@@ -92,3 +92,91 @@ h6 {
     }
 
 }
+
+/* colors:
+bright yellow: #FFFD1D 
+muted yellow: #F3C77C
+lightblue: #9AC1CB
+near black: #151414
+beige: #E7CFB1
+inspo: https://wethinkelastic.com/
+original dark bkgrd: #202123
+*/
+
+/* Dark mode */
+body {
+    background-color: #151414;
+    color: #F3C77C;
+}
+.darkmode {
+    background-color: #eee;
+    color: black;
+}
+
+.toggle {
+    background-color: white;
+    width: fit-content;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.btn {
+    background-color: #9AC1CB !important;
+    color: #151414 !important;
+}
+.divider {
+    background-color: #FFFD1D !important;
+}
+
+/* $transition-effects: color 1s ease, background-color 1s ease;
+
+html {
+	background-color: #eee;
+	transition: $transition-effects;
+	&.dark {
+		background-color: #202123;
+		color: #fff;
+		nav {
+			background-color: #26A69A;
+		}
+		.card {
+			background-color: rgba(255,255,255,0.2);
+		}
+		.btn {
+			background-color: #EE6F73;
+		}
+		.divider {
+			opacity: 0.2;
+		}
+		.sidenav {
+			background-color: #2D2D31;
+			li {
+				a {
+					&:not(.subheader){
+						color: #89B2F5;
+						&:hover {
+							background-color: #3B4043;
+						}
+					}
+					&.subheader {
+						color:#9AA0A6; 
+					}
+					.material-icons {
+						color: #9AA0A6;
+					}
+				}
+			}
+		}
+		.collection {
+			border: 1px solid rgba(255,255,255,0.2);
+			.collection-item {
+				background-color: rgba(255,255,255,0.2);
+				border-bottom: 1px solid rgba(255,255,255,0.2);;
+			}
+		}
+	}
+} */
