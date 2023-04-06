@@ -52,7 +52,7 @@ module.exports = {
     try {
         let story = await Story.findById(req.params.id)
             .populate('user')
-            .lean()
+            .lean()        
 
         if (!story) {
             return res.render('error/404')
@@ -61,7 +61,6 @@ module.exports = {
         res.render('entries/show', {
             story
         })
-        
     } catch (err) {
         console.error(err)
         res.render('error/404')

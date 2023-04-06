@@ -29,5 +29,7 @@ const StorySchema = new mongoose.Schema({
     
 })
 
+
+
 module.exports = mongoose.model('Story', StorySchema)
 // a new collection for this schema is automatically made in your database, with the 'name' pluralized, if you do not specify sending your UserSchema to a database here as a 3rd argument!
