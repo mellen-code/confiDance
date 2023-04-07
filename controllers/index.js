@@ -17,7 +17,6 @@ module.exports = {
         try {
             const stories = await Story.find({ user: req.user.id }).lean()
 
-        // This week's number of entries:
             let weeks = await Story.aggregate( 
                 [
                 {
@@ -35,26 +34,17 @@ module.exports = {
                         }
                     }
             ])
-            
 
-            // let weekDates = await Story.aggregate(
-            //     [
-            //         {
-            //             $project: {
-            //                 truncateThisWeek: {
-            //                     $dateTrunc: {
-            //                     date: "$createdAt", unit: "week", binSize: 1, 
-            //                     timezone: "America/New_York", startOfWeek: "Monday" 
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     ]
-            // )
-
+        // This week's number of entries:  FIX HOW TO GRAB THIS WEEK!
             var count = 0;
-            let thisWeek = weeks[0].thisWeekNum
-            let getThisWeekNum = function() {
+            // var topWeekNum = getTopWeekNum()
+
+            //     var topWeekObject = weeks.find(week => week.week == topWeekNum)
+
+            //     return topWeekObject.truncateThisWeek.toString().slice(4, 15);
+
+            var thisWeek = weeks[0].week
+            var getThisWeekNum = function() {
                 for (let i=0; i < weeks.length; i++) {
                     if (weeks[i].week == thisWeek) {
                         count++
@@ -64,14 +54,14 @@ module.exports = {
             }
 
         // Top Week's number of entries:
-            let getTopWeekNum = function() {
-                let res = [];
+            var getTopWeekNum = function() {
+                var res = [];
                 for (let item of weeks) {
                     res.push(item.week)
                 }
-               
-                let numMap = {};
-    
+            
+                var numMap = {};
+
                 for (let num of res) {
                     if (numMap.hasOwnProperty(num)) {
                         numMap[num] ++
@@ -80,8 +70,8 @@ module.exports = {
                     }
                 }
 
-                    let maxNumValue = 0
-                    let maxNum = ''
+                    var maxNumValue = 0
+                    var maxNum = ''
 
                     for (let num in numMap) {
                         if (numMap[num] > maxNumValue) {
@@ -89,19 +79,81 @@ module.exports = {
                             maxNum = num
                         }
                     }
-                    return maxNum
+
+                    return maxNum;
                 }
+
+        // get top week dates via its num:
+            var getTopWeekDate = function() {
+                var topWeekNum = getTopWeekNum()
+
+                var topWeekObject = weeks.find(week => week.week == topWeekNum)
+
+                return topWeekObject.truncateThisWeek.toString().slice(4, 15);
+            }
+
+        // // This week's number of entries:
+        //     var count = 0;
+        //     let thisWeek = weeks[0].thisWeekNum
+        //     let getThisWeekNum = function() {
+        //         for (let i=0; i < weeks.length; i++) {
+        //             if (weeks[i].week == thisWeek) {
+        //                 count++
+        //             }
+        //         }
+        //         return count;
+        //     }
+
+        // // Top Week's number of entries:
+        //     let getTopWeekNum = function() {
+        //         let res = [];
+        //         for (let item of weeks) {
+        //             res.push(item.week)
+        //         }
+               
+        //         let numMap = {};
+    
+        //         for (let num of res) {
+        //             if (numMap.hasOwnProperty(num)) {
+        //                 numMap[num] ++
+        //             } else {
+        //                 numMap[num] = 1
+        //             }
+        //         }
+
+        //             let maxNumValue = 0
+        //             let maxNum = ''
+
+        //             for (let num in numMap) {
+        //                 if (numMap[num] > maxNumValue) {
+        //                     maxNumValue = numMap[num]
+        //                     maxNum = num
+        //                 }
+        //             }
+
+        //             return maxNum;
+        //         }
+
+        // // get top week dates via its num:
+        //     let getTopWeekDate = function() {
+        //         let topWeekNum = getTopWeekNum()
+
+        //         let topWeekObject = weeks.find(week => week.week == topWeekNum)
+
+        //         return topWeekObject.truncateThisWeek.toString().slice(4, 15);
+        //     }
+       
     
             res.render('dashboard', {
                 name: req.user.firstName,
                 stories,
                 getThisWeekNum,
-                getTopWeekNum
+                getTopWeekDate,
             })
 
             console.log(getTopWeekNum())
+            console.log(getTopWeekDate())
             console.log(weeks)
-            // console.log(weekDates)
             
         } catch (error) {
             console.error(error)
