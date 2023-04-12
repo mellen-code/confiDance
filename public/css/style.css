@@ -91,6 +91,10 @@ h6 {
         width: 85%;
     }
 
+    .toggle-words {
+        display: none;
+    }
+
 }
 
 /* colors:
@@ -130,6 +134,30 @@ body {
 }
 .divider {
     background-color: #FFFD1D !important;
+}
+
+.hero-card {
+    width: 120%;
+}
+
+.sub-card {
+    width: 40%;
+}
+
+.hero-spacing {
+    width: 100%;
+}
+
+.nav-position {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 12px;
+}
+
+.toggle-icon {
+    line-height: 40px !important;
 }
 
 /* $transition-effects: color 1s ease, background-color 1s ease;
