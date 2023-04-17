@@ -1,33 +1,32 @@
-<div class="flex">
+<div class="flex top">
     <div class="hero-spacing">
         <h3 class="h3">Welcome {{name}}</h3>
         {{!-- <a href="/goals/" class="btn btn-float">Set Weekly Goals</a> --}}
     </div>
 
-        {{!-- <table>
+    <div class="col s4 margin-auto hero-card">
+            <div class="card small dash-card">
+                <div class="title-add-entry border-bottom">
+                    <h3>Entries</h3>
+
+                    <table>
             <thead>
-                <tr>
+                <tr class="no-border">
                     <th>This Week</th>
-                    <th>Current Top Week</th>
-                    <th>Total</th>
+                    <th class="align-center">Current Top Week</th>
+                    <th class="align-right">Total</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="no-border">
                     <td>{{getThisWeekNum}} entries</td>
-                    <td>{{getTopWeekDate}}</td>
-                    <td>{{stories.length}} entries</td>
+                    <td class="align-center">week of {{getTopWeekDate}}</td>
+                    <td class="align-right">{{stories.length}} entries</td>
                 </tr>
             </tbody>
-        </table> --}}
+        </table>
 
-    
-        <div class="col s4 margin-auto hero-card">
-            <div class="card small dash-card">
-                <h3>Entries</h3>
-
-                <div class="section">
-                    <p class="lead">My daily accomplishments and lessons learned.</p>
+                    
                 </div>
 
                 <div class="divider"></div>
@@ -36,54 +35,57 @@
                     <a href="/entries/add" class="btn"><i class="fas fa-plus"></i> Add Entry</a>
                 </div>
             </div>
-        </div>
-</div>
-
-<div class="flex">
-    <div class="hero-spacing">
-        <h3>&nbsp</h3>
     </div>
 
-            <div class="col s4 margin-auto sub-card">
-                <div class="card small dash-card">
-                    <h3>Classes</h3>
+    
 
-                    <div class="section">
-                        <p class="lead">Short movement classes, for everyone. Repeat and build on your progress.</p>
-                    </div>
+        
 
-                    <div class="divider"></div>
+    
+        
+</div>
 
-                    <div class="section">
-                        <a href="/classes/" class="btn">
-                        Classes
-                        </a>
-                    </div>
-                </div>  
+<div class="flex double-tiles">
+
+    <div class="col s4 margin-auto sub-card">
+        <div class="card small dash-card margin-right-2">
+            <h3>Move</h3>
+
+            <div class="section border-bottom">
+                <p class="lead">Short movement classes, for everyone. Repeat and build on your progress.</p>
             </div>
 
-            <div class="col s4 margin-auto sub-card">
-                <div class="card small dash-card">
-                    <h3>Got a Minute?</h3>
+            <div class="divider"></div>
 
-                    <div class="section">
-                        <p class="lead">One-minute postures designed to boost your morale or restore/relax.</p>
-                    </div>
-
-                    <div class="divider"></div>
-
-                    <div class="section">
-                        <a href="/postures/" class="btn">
-                        Postures
-                        </a>
-                    </div>
-                </div>
+            <div class="section">
+                <a href="/classes/" class="btn">
+                Classes
+                </a>
             </div>
+        </div>  
+    
+        <div class="card small dash-card margin-left-2">
+            <h3>Pose</h3>
+
+            <div class="section border-bottom">
+                <p class="lead">Strike a 1-minute pose to harness your power, confidence, or restore.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section">
+                <a href="/postures/" class="btn">
+                Strike a Pose
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 
 
-<h5>My Daily Entries</h5>
+
+<h5 class="entries-title">My Daily Entries</h5>
 
 {{#if stories}}
     <table class="striped">

@@ -28,12 +28,12 @@ module.exports = {
 },
 
 // @desc Show all public stories
-// @route GET /stories
+// @route GET /entries
     getEntries: async (req, res) => {
     try {
         const stories = await Story.find({ status: 'public'})
             .populate('user')
-            .sort({ createdAt: 'desc'})
+            .sort({ createdAt: -1})
             .lean()
             // lean converts from Mongoose object to json object for Handlebars
 
@@ -46,7 +46,7 @@ module.exports = {
     }
 },
 
-// @desc Show single story - USE THIS FOR MOOD APP!!!
+// @desc Show single story 
 // @route GET /stories/:id
     getSingleEntry: async (req, res) => {
     try {
@@ -68,7 +68,7 @@ module.exports = {
 },
 
 // @desc Show edit page
-// @route GET /stories/edit/:id
+// @route GET /entries/edit/:id
     getEditPage: async (req, res) => {
     try {
         const story = await Story.findOne({
@@ -117,8 +117,8 @@ module.exports = {
     }
 },
 
-// @desc Delete story
-// @route DELETE /stories/:id
+// @desc Delete entry
+// @route DELETE /entries/:id
     deleteEntry: async (req, res) => {
     try {
         await Story.remove({ _id: req.params.id })
@@ -129,8 +129,8 @@ module.exports = {
     }
 },
 
-// @desc User stories
-// @route GET /stories/user/:userId
+// @desc User entries
+// @route GET /entries/user/:userId
     showUserEntries: async (req, res) => {
     try {
         const stories = await Story.find({
@@ -140,9 +140,13 @@ module.exports = {
         .populate('user')
         .lean()
 
-        res.render('entries/index', {
-            stories
+        const firstName = stories[0].user.firstName
+
+        res.render('entries/userIndex', {
+            stories,
+            firstName
         })
+        console.log(firstName)
     } catch (err) {
         console.error(err)
         res.render('error/500')

@@ -1,4 +1,4 @@
-<h1>Public Feed</h1>
+<h1>{{firstName}}&#39;s Shared Entries</h1>
 <div class="row">
     {{#each stories}}
         <div class="col s12 m4">
@@ -13,7 +13,9 @@
                     <br>
                     <div class="chip">
                         <img src="{{user.image}}" alt="" referrerpolicy="no-referrer">
-                        <a href="/entries/user/{{user._id}}">{{user.displayName}}</a>
+                        {{!-- <a href="/entries/user/{{user._id}}"> --}}
+                        <a href="/entries/userIndex">{{user.displayName}}</a>
+                        
                     </div>
                 </div>
                 <div class="card-action center-align">

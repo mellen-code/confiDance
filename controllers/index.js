@@ -15,7 +15,10 @@ module.exports = {
 // @route GET /dashboard
     getDashboard: async (req, res) => {
         try {
-            const stories = await Story.find({ user: req.user.id }).lean()
+            const stories = await Story.find({ user: req.user.id})
+            .sort({ createdAt: -1})
+            .lean()
+        
 
             let thisWeekNumber = new Date();
 

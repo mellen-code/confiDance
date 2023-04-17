@@ -1,3 +1,27 @@
+/* colors: */
+/* black: #151414
+golden: #F3C77C 
+lt beige: #E7CFB1
+bright yellow: #FFFD1D
+light blue: #9AC1CB */
+
+
+
+
+
+footer {
+    margin-top: auto;
+}
+
+.custom-black, .sidenav, .page-footer {
+    background-color: #151414 !important;
+}
+
+.sidenav li>a {
+    color: #E7CFB1;
+    font-size: larger;
+}
+
 p {
     margin: 10px 0 !important;
 }
@@ -25,6 +49,10 @@ div.container > div.dash-flex > .h3 {
     margin-top: 0;
 }
 
+.hero-spacing .h3 {
+    font-weight: 700;
+}
+
 .class-image {
     height: 100%;
     width: 100%;
@@ -37,6 +65,11 @@ div.container > div.dash-flex > .h3 {
 .flex {
     display: flex;
     align-items: center;
+}
+
+.section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 0 !important;
 }
 
 .link-spacing {
@@ -61,12 +94,32 @@ div.container > div.dash-flex > .h3 {
     text-align: center;
 }
 
+body > nav > div > a.brand-logo.center, body > nav > div > a.sidenav-trigger.show-on-large > i {
+    color: white;
+}
+
+#dark-mode-toggle {
+    background-color: #E7CFB1;
+}
+
 .margin-auto {
     margin: auto !important;
 }
 
 h6 {
     text-align: center;
+}
+
+.extra-margin-top {
+    margin-top: 35%;
+}
+
+.small-margin-top {
+    margin-top: 3%;
+}
+
+.dropdown-trigger {
+    line-height: 30px;
 }
 
 .page-footer {
@@ -111,6 +164,9 @@ original dark bkgrd: #202123
 body {
     background-color: #151414;
     color: #F3C77C;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .darkmode {
     background-color: #eee;
@@ -126,6 +182,7 @@ body {
 
 .card {
     background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
 }
 
 .btn {
@@ -134,18 +191,58 @@ body {
 }
 .divider {
     background-color: #FFFD1D !important;
+    height: 3px;
 }
 
 .hero-card {
-    width: 120%;
+    width: 150%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
 }
 
 .sub-card {
-    width: 40%;
+    width: 60%;
+    display: flex;
+    margin: 0 !important;
 }
 
 .hero-spacing {
     width: 100%;
+}
+
+.invisible {
+    display: none;
+}
+
+.double-tiles {
+    justify-content: end;
+}
+
+.border-bottom {
+    margin-bottom: 1rem;
+}
+
+.no-border {
+    border: none;
+}
+
+.margin-right-2 {
+    margin-right: 2%;
+}
+
+.margin-left-2 {
+    margin-left: 2%;
+}
+
+.top {
+    margin-top: 4%;
+    align-items: end;
 }
 
 .nav-position {
@@ -159,6 +256,46 @@ body {
 .toggle-icon {
     line-height: 40px !important;
 }
+
+/* My Entries */
+.striped, .entries-title {
+    color: #E7CFB1;
+}
+
+body > div.container > table > tbody a {
+    color: #E7CFB1;
+    font-weight: bold;
+}
+
+body > div.container > table > tbody a:hover {
+    color: #FFFD1D;
+}
+
+table.striped > tbody tr {
+    background-color: #151414 !important;
+}
+
+/* Add Entry page */
+
+#title {
+    color: white;
+}
+
+/* Classes page */
+
+#entries-text2 {
+    font-style: italic !important;
+    text-align: left !important;
+}
+
+#entries-text1 {
+    line-height: 140% !important;
+}
+
+.classes-row {
+    margin-top: 1.5rem;
+}
+
 
 /* $transition-effects: color 1s ease, background-color 1s ease;
 
