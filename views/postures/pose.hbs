@@ -1,13 +1,23 @@
 <h2>{{posture.pose}}</h2>
 
-<p>{{posture.description}}</p>
+<div class="pose-content">
+    <div class="pose-pic">
+        <img src={{posture.image}} alt={{posture.name}} class="src">
 
-<img src={{posture.image}} alt={{posture.name}} class="src">
+        <div class="row posture-menu-buttons">
+            <a href="/postures/" class="btn">Postures Menu</a>
+            <a href="/dashboard" class="btn">Dashboard</a>
+        </div>
+    </div>
 
-<div class="row">
-    <a href="/postures/" class="btn orange">Postures Menu</a>
-    <a href="/dashboard" class="btn orange">Dashboard</a>
+    <div class="pose-text-and-buttons">
+        <h6 class="pose-text newlines">{{posture.briefDescription}}</h6>
+
+        
+    </div>
 </div>
+
+
 
 
 

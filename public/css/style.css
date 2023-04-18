@@ -32,6 +32,17 @@ p {
     text-align: center
 }
 
+.lead {
+    color: #E7CFB1;
+    width: 80%;
+    margin: auto !important;
+}
+
+.login-divider {
+    width: 80%;
+    margin: 4% auto 0 auto !important;
+}
+
 .fa-small {
     font-size: 16px !important;
 }
@@ -95,7 +106,7 @@ div.container > div.dash-flex > .h3 {
 }
 
 body > nav > div > a.brand-logo.center, body > nav > div > a.sidenav-trigger.show-on-large > i {
-    color: white;
+    color: #E7CFB1;
 }
 
 #dark-mode-toggle {
@@ -294,6 +305,34 @@ table.striped > tbody tr {
 
 .classes-row {
     margin-top: 1.5rem;
+}
+
+/* Posture Pages */
+.pose-content {
+    display: flex;
+}
+
+.pose-text-and-buttons {
+    flex: 1;
+    margin: 0 0 0 2rem;
+}
+
+.pose-text {
+    text-align: left;
+    line-height: 200%;
+    margin-top: 0;
+}
+
+.newlines {
+    white-space: pre-line;
+}
+
+.pose-text::margin-top {
+    margin: 0;
+}
+
+.posture-menu-buttons {
+    margin-top: 2rem;
 }
 
 
