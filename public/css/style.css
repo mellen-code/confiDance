@@ -141,7 +141,7 @@ h6 {
     line-height: normal !important;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
 
     .dash-flex {
         display: block;
@@ -149,6 +149,11 @@ h6 {
 
     .row .col {
         float: none;
+    }
+
+    body > div.container > div.row.classes-row > div.col.s4 {
+        width: 85%;
+        margin: 2rem auto;
     }
 
     body > div.container > div.row.flex.dash-flex > div:nth-child(1), body > div.container > div.row.flex.dash-flex > div:nth-child(2), body > div.container > div.row.flex.dash-flex > div:nth-child(3) {
