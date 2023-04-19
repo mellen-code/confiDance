@@ -27,7 +27,7 @@ module.exports = {
     }
 },
 
-// @desc Show all public stories
+// @desc Show all public stories (feed)
 // @route GET /entries
     getEntries: async (req, res) => {
     try {
@@ -129,7 +129,7 @@ module.exports = {
     }
 },
 
-// @desc User entries
+// @desc User public entries
 // @route GET /entries/user/:userId
     showUserEntries: async (req, res) => {
     try {
@@ -138,6 +138,7 @@ module.exports = {
             status: 'public',
         })
         .populate('user')
+        .sort({ createdAt: -1})
         .lean()
 
         const firstName = stories[0].user.firstName

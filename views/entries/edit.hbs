@@ -1,16 +1,22 @@
-<h3>Edit Note</h3>
+<h3>Edit Entry</h3>
 <div class="row">
     <form action="/entries/{{story._id}}" method="POST" class="col s12">
 
     {{!-- This is the hidden input box to override POST method when want to use another method --}}
         <input type="hidden" name="_method" value="PUT">
 
-        {{!-- <div class="row">
+        <div class="row">
             <div class="input-field">
                 <input type="text" name="title" id="title" value="{{ story.title }}">
                 <label for="title">Title</label>
             </div>
-        </div> --}}
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <textarea name="body" id="body">{{story.body}}</textarea>
+            </div>
+        </div>
 
         <div class="row">
             <div class="input-field">
@@ -26,15 +32,8 @@
         </div>
 
         <div class="row">
-            <div class="input-field">
-                <h5>Describe:</h5>
-                <textarea name="body" id="body">{{story.body}}</textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <input type="submit" value="Save" class="btn cyan">
-            <a href="/dashboard" class="btn orange">Cancel</a>
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn">Cancel</a>
         </div>
     </form>
 </div>

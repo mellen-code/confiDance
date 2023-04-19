@@ -1,5 +1,5 @@
 <h1>Public Feed</h1>
-<div class="row">
+<div class="row feed-row">
     {{#each stories}}
         <div class="col s12 m4">
             <div class="card">
@@ -8,7 +8,11 @@
                     {{{editIcon user ../user _id}}}
                 </div>
                 <div class="card-content center-align">
+                    {{#if title}}
                     <h5 class="truncate">{{title}}</h5>
+                    {{else}}
+                    <h5 class="truncate">untitled</h5>
+                    {{/if}}
                     <p>{{stripTags (truncate body 20) }}</p>
                     <br>
                     <div class="chip">
