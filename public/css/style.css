@@ -1,3 +1,225 @@
+/* colors:
+bright yellow: #FFFD1D 
+golden: #F3C77C
+lightblue: #9AC1CB
+near black: #151414
+lt beige: #E7CFB1
+inspo: https://wethinkelastic.com/
+original dark bkgrd: #202123
+*/
+
+/* Dark mode */
+body {
+    background-color: #151414;
+    color: #F3C77C;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.darkmode {
+    background-color: #eee;
+    color: black;
+}
+
+.toggle {
+    background-color: white;
+    width: fit-content;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+
+.margin-auto {
+    margin: auto !important;
+}
+
+.btn {
+    background-color: #9AC1CB !important;
+    color: #151414 !important;
+}
+.divider {
+    background-color: #FFFD1D !important;
+    height: 3px;
+}
+
+.hero-card {
+    width: 150%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.sub-card {
+    width: 60%;
+    display: flex;
+    margin: 0 !important;
+}
+
+.hero-spacing {
+    width: 100%;
+}
+
+.invisible {
+    display: none;
+}
+
+.double-tiles {
+    justify-content: end;
+}
+
+.border-bottom {
+    margin-bottom: 1rem;
+}
+
+.no-border {
+    border: none;
+}
+
+.margin-right-2 {
+    margin-right: 2%;
+}
+
+.margin-left-2 {
+    margin-left: 2%;
+}
+
+.top {
+    margin-top: 4%;
+    align-items: end;
+}
+
+.nav-position {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 12px;
+}
+
+.toggle-icon {
+    line-height: 40px !important;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+#mobile-demo a:hover {
+    cursor: pointer !important;
+    color: #F3C77C;
+}
+
+.container {
+    margin: 0 auto 1rem auto !important;
+}
+
+#disclaimer {
+    text-align: left;
+    font-style: italic;
+    margin-top: 2.5rem;
+    color: #9AC1CB;
+}
+
+
+
+/* My Entries */
+.striped, .entries-title {
+    color: #E7CFB1;
+}
+
+.entries-title {
+    margin-top: 5rem;
+}
+
+body > div.container > table > tbody a {
+    color: #E7CFB1;
+    font-weight: bold;
+}
+
+body > div.container > table > tbody a:hover {
+    color: #FFFD1D;
+}
+
+table.striped > tbody tr {
+    background-color: #151414 !important;
+}
+
+/* Add Entry page */
+
+#title {
+    color: white;
+}
+
+/* Edit Entry page */
+
+.select-wrapper input.select-dropdown {
+    color: white;
+}
+
+/* Classes page */
+
+#entries-text2 {
+    text-align: left !important;
+}
+
+#entries-text1 {
+    line-height: 140% !important;
+}
+
+.classes-row {
+    margin-top: 1.5rem;
+}
+
+/* Posture Pages */
+.pose-content {
+    display: flex;
+}
+
+.pose-text-and-buttons {
+    flex: 1;
+    margin: 0 0 0 2rem;
+}
+
+.pose-text {
+    text-align: left;
+    line-height: 200%;
+    margin-top: 0;
+}
+
+.newlines {
+    white-space: pre-line;
+}
+
+.pose-text::margin-top {
+    margin: 0;
+}
+
+.posture-menu-buttons {
+    margin-top: 2rem;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.custom-black, .sidenav, .page-footer {
+    background-color: #151414 !important;
+}
+
+.sidenav li>a {
+    color: #E7CFB1;
+    font-size: larger;
+}
+
 p {
     margin: 10px 0 !important;
 }
@@ -6,6 +228,17 @@ p {
     width: 400px;
     margin-top: 50px;
     text-align: center
+}
+
+.lead {
+    color: #E7CFB1;
+    width: 80%;
+    margin: auto !important;
+}
+
+.login-divider {
+    width: 80%;
+    margin: 4% auto 0 auto !important;
 }
 
 .fa-small {
@@ -25,6 +258,10 @@ div.container > div.dash-flex > .h3 {
     margin-top: 0;
 }
 
+.hero-spacing .h3 {
+    font-weight: 700;
+}
+
 .class-image {
     height: 100%;
     width: 100%;
@@ -37,6 +274,11 @@ div.container > div.dash-flex > .h3 {
 .flex {
     display: flex;
     align-items: center;
+}
+
+.section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 0 !important;
 }
 
 .link-spacing {
@@ -61,76 +303,134 @@ div.container > div.dash-flex > .h3 {
     text-align: center;
 }
 
-.margin-auto {
-    margin: auto !important;
+body > nav > div > a.brand-logo.center, body > nav > div > a.sidenav-trigger.show-on-large > i {
+    color: #E7CFB1;
 }
+
+#dark-mode-toggle {
+    background-color: #E7CFB1;
+    
+}
+
+.select-wrapper .caret {
+    fill: white;
+}
+
+
 
 h6 {
     text-align: center;
 }
 
+.extra-margin-top {
+    margin-top: 35%;
+}
+
+.small-margin-top {
+    margin-top: 3%;
+}
+
+.dropdown-trigger {
+    line-height: 30px;
+}
+
 .page-footer {
     padding-top: 0;
+    width: 90%;
+    margin: auto;
 }
 
 .truncate {
     line-height: normal !important;
 }
 
-@media screen and (max-width: 750px) {
 
-    .dash-flex {
+@media screen and (max-width: 790px) {
+
+    .dash-flex, .flex {
         display: block;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .sub-card {
+        width: 100%;
+        display: block;
+    }
+
+    .margin-right-2, .margin-left-2 {
+        margin: 0 0 3% 0;
     }
 
     .row .col {
         float: none;
     }
 
+    body > div.container > div.row.classes-row > div.col.s4 {
+        width: 85%;
+        margin: 2rem auto;
+    }
+
     body > div.container > div.row.flex.dash-flex > div:nth-child(1), body > div.container > div.row.flex.dash-flex > div:nth-child(2), body > div.container > div.row.flex.dash-flex > div:nth-child(3) {
         width: 85%;
     }
 
+    .toggle-words {
+        display: none;
+    }
+
+    body > div.container > div.row.classes-row > div:nth-child(1) > div > div > div, body > div.container > div.row.classes-row > div:nth-child(2) > div > div > div, body > div.container > div.row.classes-row > div:nth-child(3) > div > div > div {
+        display: flex;
+    }
+
+    #toggle-div {
+        width: 1.5rem;
+    }
+
+    .pose-content {
+        display: block;
+    }
+
+    .pose-text-and-buttons {
+        margin: 0;
+    }
+
+    .feed-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }
 
-/* colors:
-bright yellow: #FFFD1D 
-muted yellow: #F3C77C
-lightblue: #9AC1CB
-near black: #151414
-beige: #E7CFB1
-inspo: https://wethinkelastic.com/
-original dark bkgrd: #202123
-*/
+@media screen and (max-width: 550px) {
+    .pose-content {
+        margin: 0 3rem;
+    }
 
-/* Dark mode */
-body {
-    background-color: #151414;
-    color: #F3C77C;
-}
-.darkmode {
-    background-color: #eee;
-    color: black;
+    .page-footer {
+        width: 100%;
+    }
 }
 
-.toggle {
-    background-color: white;
-    width: fit-content;
-    border-radius: 3px;
-    padding: 5px;
+@media screen and (max-width: 380px) {
+    .hide380 {
+        display: none;
+        width: 0;
+    }
+
+    .show380 {
+        width: 100%;
+    }
+
+    body > div.container > div.flex.top > div.col.s4.margin-auto.hero-card > div {
+        height: 350px !important;
+    }
 }
 
-.card {
-    background-color: rgba(255,255,255,0.2);
-}
 
-.btn {
-    background-color: #9AC1CB !important;
-    color: #151414 !important;
-}
-.divider {
-    background-color: #FFFD1D !important;
-}
+
 
 /* $transition-effects: color 1s ease, background-color 1s ease;
 

@@ -15,7 +15,12 @@ module.exports = {
 // @route GET /dashboard
     getDashboard: async (req, res) => {
         try {
-            const stories = await Story.find({ user: req.user.id }).lean()
+            const stories = await Story.find({ user: req.user.id})
+            .sort({ createdAt: -1})
+            .lean()
+        
+
+            let thisWeekNumber = new Date();
 
             let weeks = await Story.aggregate( 
                 [
@@ -35,18 +40,12 @@ module.exports = {
                     }
             ])
 
-        // This week's number of entries:  FIX HOW TO GRAB THIS WEEK!
+        // This week's number of entries:
             var count = 0;
-            // var topWeekNum = getTopWeekNum()
-
-            //     var topWeekObject = weeks.find(week => week.week == topWeekNum)
-
-            //     return topWeekObject.truncateThisWeek.toString().slice(4, 15);
-
-            var thisWeek = weeks[0].week
+            var thisWeekNum = weeks[0].thisWeekNum
             var getThisWeekNum = function() {
                 for (let i=0; i < weeks.length; i++) {
-                    if (weeks[i].week == thisWeek) {
+                    if (weeks[i].week == thisWeekNum) {
                         count++
                     }
                 }
@@ -74,7 +73,7 @@ module.exports = {
                     var maxNum = ''
 
                     for (let num in numMap) {
-                        if (numMap[num] > maxNumValue) {
+                        if (numMap[num] >= maxNumValue) {
                             maxNumValue = numMap[num]
                             maxNum = num
                         }
@@ -90,70 +89,14 @@ module.exports = {
                 var topWeekObject = weeks.find(week => week.week == topWeekNum)
 
                 return topWeekObject.truncateThisWeek.toString().slice(4, 15);
-            }
-
-        // // This week's number of entries:
-        //     var count = 0;
-        //     let thisWeek = weeks[0].thisWeekNum
-        //     let getThisWeekNum = function() {
-        //         for (let i=0; i < weeks.length; i++) {
-        //             if (weeks[i].week == thisWeek) {
-        //                 count++
-        //             }
-        //         }
-        //         return count;
-        //     }
-
-        // // Top Week's number of entries:
-        //     let getTopWeekNum = function() {
-        //         let res = [];
-        //         for (let item of weeks) {
-        //             res.push(item.week)
-        //         }
-               
-        //         let numMap = {};
-    
-        //         for (let num of res) {
-        //             if (numMap.hasOwnProperty(num)) {
-        //                 numMap[num] ++
-        //             } else {
-        //                 numMap[num] = 1
-        //             }
-        //         }
-
-        //             let maxNumValue = 0
-        //             let maxNum = ''
-
-        //             for (let num in numMap) {
-        //                 if (numMap[num] > maxNumValue) {
-        //                     maxNumValue = numMap[num]
-        //                     maxNum = num
-        //                 }
-        //             }
-
-        //             return maxNum;
-        //         }
-
-        // // get top week dates via its num:
-        //     let getTopWeekDate = function() {
-        //         let topWeekNum = getTopWeekNum()
-
-        //         let topWeekObject = weeks.find(week => week.week == topWeekNum)
-
-        //         return topWeekObject.truncateThisWeek.toString().slice(4, 15);
-        //     }
-       
+            }      
     
             res.render('dashboard', {
                 name: req.user.firstName,
                 stories,
                 getThisWeekNum,
                 getTopWeekDate,
-            })
-
-            console.log(getTopWeekNum())
-            console.log(getTopWeekDate())
-            console.log(weeks)
+            })          
             
         } catch (error) {
             console.error(error)

@@ -1,13 +1,25 @@
 <h2>{{posture.pose}}</h2>
 
-<p>{{posture.description}}</p>
+<div class="pose-content">
+    <div class="pose-pic">
+        <img src={{posture.image}} alt={{posture.name}} class="src">
 
-<img src={{posture.image}} alt={{posture.name}} class="src">
+        
+    </div>
 
-<div class="row">
-    <a href="/postures/" class="btn orange">Postures Menu</a>
-    <a href="/dashboard" class="btn orange">Home</a>
+    <div class="pose-text-and-buttons">
+        <h6 class="pose-text newlines">{{posture.briefDescription}}</h6>
+
+        
+    </div>
 </div>
+
+<div class="text row posture-menu-buttons">
+            <h6 id="disclaimer">&#42;ConfiDance and its partners assume no responsibility or liability for any personal injury before, during or after the activities.<br>
+            Please consult a doctor before proceeding with any activity if you have any medical conditions.</h6>
+</div>
+
+
 
 
 
