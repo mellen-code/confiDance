@@ -42,9 +42,9 @@ app.use(methodOverride(function (req, res) {
 
 // Logging: 
 // Morgan tells us in the console what pages are being touched, during dev mode ONLY:
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'))
-}
+// if (process.env.NODE_ENV === 'development') {
+//     app.use(morgan('dev'))
+// }
 
 // Handlebars Helpers
 const { formatDate, stripTags, truncate, editIcon, select } = require('./helpers/hbs')

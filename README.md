@@ -7,7 +7,7 @@ Build self-confidence through movement, journaling, and tracking!
 
 Full-stack web app using Node, Express, MongoDB, Passport & GoogleOAuth, Materialize, and Handlebars.
 
-## Tech used: [NODE BADGE](https://img.shields.io/static/v1?label=|&message=NODE&color=cbb148&style=plastic&logo=node)![MONGODB BADGE](https://img.shields.io/static/v1?label=|&message=MONGO-DB&color=cdd148&style=plastic&logo=mongodb)![EXPRESS BADGE](https://img.shields.io/static/v1?label=|&message=EXPRESS&color=bbb111&style=plastic&logo=express)![HANDLEBARS BADGE](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript)
+## Tech used: ![NODE BADGE](https://img.shields.io/static/v1?label=%7C&message=NODE&color=cbb148&style=plastic&logo=node)![MONGODB BADGE](https://img.shields.io/static/v1?label=|&message=MONGO-DB&color=cdd148&style=plastic&logo=mongodb)![EXPRESS BADGE](https://img.shields.io/static/v1?label=|&message=EXPRESS&color=bbb111&style=plastic&logo=express)![JAVASCRIPT BADGE](https://img.shields.io/static/v1?label=|&message=JAVASCRIPT&color=3c7f5d&style=plastic&logo=javascript)![HANDLEBARS BADGE](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)![CSS BADGE](https://img.shields.io/static/v1?label=|&message=CSS3&color=285f65&style=plastic&logo=css3)
 
 
 ## Optimizations
