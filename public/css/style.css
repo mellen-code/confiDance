@@ -1,6 +1,6 @@
 /* colors:
 bright yellow: #FFFD1D 
-muted yellow: #F3C77C
+golden: #F3C77C
 lightblue: #9AC1CB
 near black: #151414
 lt beige: #E7CFB1
@@ -109,6 +109,26 @@ body {
     line-height: 40px !important;
 }
 
+.footer-copyright {
+    text-align: center;
+}
+
+#mobile-demo a:hover {
+    cursor: pointer !important;
+    color: #F3C77C;
+}
+
+.container {
+    margin: 0 auto 1rem auto !important;
+}
+
+#disclaimer {
+    text-align: left;
+    font-style: italic;
+    margin-top: 2.5rem;
+    color: #9AC1CB;
+}
+
 
 
 /* My Entries */
@@ -148,7 +168,6 @@ table.striped > tbody tr {
 /* Classes page */
 
 #entries-text2 {
-    font-style: italic !important;
     text-align: left !important;
 }
 
@@ -317,6 +336,8 @@ h6 {
 
 .page-footer {
     padding-top: 0;
+    width: 90%;
+    margin: auto;
 }
 
 .truncate {
@@ -387,9 +408,22 @@ h6 {
     .pose-content {
         margin: 0 3rem;
     }
+
+    .page-footer {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 380px) {
+    .hide380 {
+        display: none;
+        width: 0;
+    }
+
+    .show380 {
+        width: 100%;
+    }
+
     body > div.container > div.flex.top > div.col.s4.margin-auto.hero-card > div {
         height: 350px !important;
     }
