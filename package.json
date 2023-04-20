@@ -4,7 +4,7 @@
   "description": "Movement and confidence-encouraging app using Node, Express, MongoDB, Materialize and Handlebars.",
   "main": "app.js",
   "scripts": {
-    "start": "npm run start",
+    "start": "node app.js",
     "dev": "cross-env NODE_ENV=development nodemon app"
   },
   "author": "Marie Smith",
