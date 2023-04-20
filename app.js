@@ -1,6 +1,8 @@
-// const path = require('path')
-const path = require('@s3fs')
+const path = require('path')
 const express = require('express')
+const app = express()
+
+// const fs = require('@cyclic.sh/s3fs')(cyclic-maroon-frog-robe-us-west-2)
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
@@ -23,8 +25,6 @@ dotenv.config({ path: './config/config.env'})
 require('./config/passport')(passport)
 
 connectDB()
-
-const app = express()
 
 // Body parser
 app.use(express.urlencoded({ extended: false}))
@@ -103,5 +103,7 @@ app.use('/postures', posturesRoutes);
 
 const PORT = process.env.PORT || 3000
 
-
-app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
+app.listen(PORT, () => {
+    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+})
+// app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
