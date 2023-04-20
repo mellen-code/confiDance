@@ -1,5 +1,5 @@
-const path = require('path')
-const fs = require('@cyclic.sh/s3fs')
+// const path = require('path')
+const path = require('@cyclic.sh/s3fs')
 const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
