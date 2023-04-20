@@ -1,5 +1,5 @@
-const path = require('path')
 const express = require('express')
+const path = require('path')
 const app = express()
 
 // const fs = require('@cyclic.sh/s3fs')(cyclic-maroon-frog-robe-us-west-2)
@@ -24,10 +24,11 @@ dotenv.config({ path: './config/config.env'})
 // Passportjs config
 require('./config/passport')(passport)
 
-connectDB()
+// !connectDB() - edit on line 
 
 // Body parser
-app.use(express.urlencoded({ extended: false}))
+//! app.use(express.urlencoded({ extended: false}))
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 // Method override - intercepting POST method and swapping with method we want instead
@@ -101,9 +102,12 @@ app.use('/classes', classesRoutes);
 app.use('/postures', posturesRoutes);
 
 
-const PORT = process.env.PORT || 3000
+// ! const PORT = process.env.PORT || 3000
 
-app.listen(PORT, () => {
-    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-})
+connectDB().then(() => {
+    app.listen(process.env.PORT, () => {
+        console.log(`Server running on ${process.env.NODE_ENV}, you better catch it!`
+        );
+    });
+});
 // app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
