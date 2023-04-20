@@ -27,7 +27,7 @@ require('./config/passport')(passport)
 connectDB()
 
 // Body parser
-app.use(express.urlencoded({ extended: false}))
+app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
 // Method override - intercepting POST method and swapping with method we want instead
