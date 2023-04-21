@@ -1,8 +1,6 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-
-// const fs = require('@cyclic.sh/s3fs')(cyclic-maroon-frog-robe-us-west-2)
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
