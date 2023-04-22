@@ -5,7 +5,7 @@ const router = express.Router()
 
 // @desc Auth with Google
 // @route GET /auth/google
-router.get('/google', passport.authenticate('google', { scope: ['email'] } ))
+router.get('/google', passport.authenticate('google', { scope: ['profile'] } ))
 
 
 // @desc Google auth callback. If fails, redirected back home ('/'), if successful, redirected to dashboard:
