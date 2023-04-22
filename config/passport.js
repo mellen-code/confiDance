@@ -9,7 +9,7 @@ module.exports = function(passport) {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         callbackURL: 'https://confidance.cyclic.app/auth/google/callback',
-        scope: ['openid email'],
+        scope: ['email'],
     },
     async (accessToken, refreshToken, profile, done) => {
         // console.log(profile)
