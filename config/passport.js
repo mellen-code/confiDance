@@ -8,7 +8,7 @@ module.exports = function(passport) {
     passport.use(new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: 'https://confidance.cyclic.app/auth/google/callback',
+        callbackURL: 'auth/google/callback',
         scope: ['email'],
     },
     async (accessToken, refreshToken, profile, done) => {
