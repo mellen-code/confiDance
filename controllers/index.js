@@ -15,7 +15,6 @@ module.exports = {
 // @route GET /dashboard
     getDashboard: async (req, res) => {
         try {
-            console.log(req.user)
             const stories = await Story.find({ user: req.user.id})
             .sort({ createdAt: -1})
             .lean()
