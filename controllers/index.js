@@ -19,8 +19,6 @@ module.exports = {
             .sort({ createdAt: -1})
             .lean()
 
-            console.log(Story.user)
-
             let thisWeekNumber = new Date();
 
                 let weeks = await Story.aggregate( 
@@ -35,10 +33,13 @@ module.exports = {
                             date: "$createdAt", unit: "week", binSize: 1, 
                             timezone: "America/New_York", startOfWeek: "Monday" 
                             }
-                        }
+                        },
+                        userID: "$user"
                         }
                     }
             ])
+
+            console.log(weeks)
 
         // This week's number of entries:
             var count = 0;
