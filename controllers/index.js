@@ -87,7 +87,9 @@ module.exports = {
 
                 var topWeekObject = weeks.find(week => week.week == topWeekNum)
 
-                return topWeekObject.truncateThisWeek.toString().slice(4, 15);
+                // return topWeekObject.truncateThisWeek.toString().slice(4, 15);
+
+                topWeekObject ? topWeekObject.truncateThisWeek.toString().slice(4, 15): 'no top week yet'
             }      
     
             res.render('dashboard', {
