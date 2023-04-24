@@ -99,6 +99,8 @@ module.exports = {
 
                 var topWeekObject = userEntries.find(entry => entry.week == topWeekNum)
 
+                if (topWeekObject == {}) {return 'top week coming soon!'}
+
                 return topWeekObject.truncateThisWeek.toString().slice(4, 15);
             }      
 
