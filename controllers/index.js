@@ -19,7 +19,7 @@ module.exports = {
             .sort({ createdAt: -1})
             .lean()
 
-            console.log(req.user)
+            console.log(stories)
 
             let thisWeekNumber = new Date();
 
@@ -39,6 +39,8 @@ module.exports = {
                         }
                     }
             ])
+
+            console.log(weeks)
 
         // This week's number of entries:
             var count = 0;
