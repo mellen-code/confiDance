@@ -23,7 +23,7 @@ module.exports = {
 
             let thisWeekNumber = new Date();
 
-                let weeks = await stories.aggregate( 
+                let weeks = await Story.aggregate( 
                 [
                 {
                     $project: {
