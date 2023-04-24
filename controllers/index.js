@@ -58,6 +58,7 @@ module.exports = {
                     }
                     return count;
                 }
+                getThisWeekNum()
             }
 
         // Top Week's number of entries:
