@@ -94,7 +94,7 @@ module.exports = {
             var getTopWeekDate = function() {
                 var topWeekNum = getTopWeekNum()
 
-                var topWeekObject = userEntries.find(entry => entry.week == topWeekNum())
+                var topWeekObject = userEntries.find(entry => entry.week == topWeekNum)
 
                 return topWeekObject
 
