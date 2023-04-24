@@ -45,10 +45,10 @@ module.exports = {
 
         // This week's number of entries:
             var count = 0;
-            var thisWeekNum = weeks[0].thisWeekNum
+            var thisWeekNum = userEntries[0].thisWeekNum
             var getThisWeekNum = function() {
-                for (let i=0; i < weeks.length; i++) {
-                    if (weeks[i].week == thisWeekNum) {
+                for (let i=0; i < userEntries.length; i++) {
+                    if (userEntries[i].week == thisWeekNum) {
                         count++
                     }
                 }
