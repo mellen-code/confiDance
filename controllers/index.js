@@ -15,6 +15,7 @@ module.exports = {
 // @route GET /dashboard
     getDashboard: async (req, res) => {
         try {
+            console.log(req.user)
             const stories = await Story.find({ user: req.user.id})
             .sort({ createdAt: -1})
             .lean()
@@ -25,7 +26,6 @@ module.exports = {
             let weeks = await Story.aggregate( 
                 [
                 {
-// https://www.mongodb.com/docs/v6.0/reference/operator/aggregation/dateTrunc/
                     $project: {
                         week: { $week: "$createdAt"},
                         thisWeek: { date: new Date() },
