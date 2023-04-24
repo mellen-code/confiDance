@@ -41,7 +41,7 @@ module.exports = {
 
             let userEntries = weeks.filter((week) => week.userID == req.user.id)
 
-            console.log(userEntries)
+            // console.log(userEntries)
 
         // This week's number of entries:
             var count = 0;
@@ -93,10 +93,12 @@ module.exports = {
 
                 // return topWeekObject.truncateThisWeek.toString().slice(4, 15);
 
-                console.log(topWeekObject)
+                return topWeekObject
 
                 // return topWeekObject.length >= 1 ? topWeekObject.truncateThisWeek.toString().slice(4, 15) : 'no top week yet'
             }      
+
+            console.log(getTopWeekDate)
     
             res.render('dashboard', {
                 name: req.user.firstName,
