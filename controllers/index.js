@@ -23,7 +23,11 @@ module.exports = {
 
             let thisWeekNumber = new Date();
 
-            let weeks = await stories.aggregate( 
+            if (stories == []) {
+                let weeks = [];
+                console.log('no stories')
+            } else {
+                let weeks = await stories.aggregate( 
                 [
                 {
                     $project: {
@@ -38,7 +42,7 @@ module.exports = {
                         }
                         }
                     }
-            ])
+            ])}
 
         // This week's number of entries:
             var count = 0;
