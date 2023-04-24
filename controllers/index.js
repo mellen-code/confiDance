@@ -89,16 +89,16 @@ module.exports = {
             var getTopWeekDate = function() {
                 var topWeekNum = getTopWeekNum()
 
-                var topWeekObject = userEntries.find(entry => entry.week == topWeekNum)
+                return topWeekNum
+
+                // var topWeekObject = userEntries.find(entry => entry.week == topWeekNum)
 
                 // return topWeekObject.truncateThisWeek.toString().slice(4, 15);
-
-                return topWeekObject
 
                 // return topWeekObject.length >= 1 ? topWeekObject.truncateThisWeek.toString().slice(4, 15) : 'no top week yet'
             }      
 
-            console.log(getTopWeekDate)
+            console.log(getTopWeekDate())
     
             res.render('dashboard', {
                 name: req.user.firstName,
