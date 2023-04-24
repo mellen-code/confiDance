@@ -34,6 +34,7 @@ module.exports = function(passport) {
         } catch (err) {
             console.error(err)
         }
+        console.log(profile)
     }))
 
     // Serialize/Deserialize = telling Passport how to save a User:
@@ -44,6 +45,4 @@ module.exports = function(passport) {
     passport.deserializeUser((id, done) => {
         User.findById(id, (err, user) => done(err, user))
     })
-
-    console.log(profile)
 }
