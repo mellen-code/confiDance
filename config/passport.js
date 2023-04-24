@@ -12,7 +12,7 @@ module.exports = function(passport) {
         scope: ['profile']
     },
     async (accessToken, refreshToken, profile, done) => {
-        // console.log(profile)
+        console.log(profile)
         const newUser = {
             googleID: profile.id,
             displayName: profile.displayName,
