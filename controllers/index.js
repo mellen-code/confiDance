@@ -93,7 +93,9 @@ module.exports = {
 
                 // return topWeekObject.truncateThisWeek.toString().slice(4, 15);
 
-                return topWeekObject.length >= 1 ? topWeekObject.truncateThisWeek.toString().slice(4, 15) : 'no top week yet'
+                console.log(topWeekObject)
+
+                // return topWeekObject.length >= 1 ? topWeekObject.truncateThisWeek.toString().slice(4, 15) : 'no top week yet'
             }      
     
             res.render('dashboard', {
