@@ -19,7 +19,7 @@ module.exports = {
             .sort({ createdAt: -1})
             .lean()
 
-            console.log(stories)
+            console.log(Story.user)
 
             let thisWeekNumber = new Date();
 
