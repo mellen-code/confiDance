@@ -18,7 +18,6 @@ module.exports = {
             const stories = await Story.find({ user: req.user.id})
             .sort({ createdAt: -1})
             .lean()
-        
 
             let thisWeekNumber = new Date();
 
@@ -89,7 +88,7 @@ module.exports = {
 
                 // return topWeekObject.truncateThisWeek.toString().slice(4, 15);
 
-                topWeekObject ? topWeekObject.truncateThisWeek.toString().slice(4, 15): 'no top week yet'
+                return topWeekObject ? topWeekObject.truncateThisWeek.toString().slice(4, 15): 'no top week yet'
             }      
     
             res.render('dashboard', {
