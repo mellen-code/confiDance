@@ -39,7 +39,9 @@ module.exports = {
                     }
             ])
 
-            console.log(weeks)
+            let userEntries = weeks.filter((week) => week.userID == req.user.id)
+
+            console.log(userEntries)
 
         // This week's number of entries:
             var count = 0;
