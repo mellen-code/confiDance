@@ -91,8 +91,6 @@ module.exports = {
                     return maxNum == '' ? 0 : maxNum
                 }
 
-                console.log(getTopWeekNum())
-
         // get top week dates via its num:
             var getTopWeekDate = function() {
                 var topWeekNum = getTopWeekNum()
