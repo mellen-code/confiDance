@@ -19,6 +19,8 @@ module.exports = {
             .sort({ createdAt: -1})
             .lean()
 
+            console.log(req.user)
+
             let thisWeekNumber = new Date();
 
             let weeks = await Story.aggregate( 

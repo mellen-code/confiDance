@@ -26,17 +26,17 @@ module.exports = function(passport) {
 
             if (user) {
                 done(null, user)
-                console.log(user)
+                // console.log(user)
             }
             else {
                 user = await User.create(newUser)
                 done(null, user)
             }
-            console.log(user)
+            // console.log(user)
         } catch (err) {
             console.error(err)
         }
-        console.log(profile)
+        // console.log(profile)
         
     }))
 
