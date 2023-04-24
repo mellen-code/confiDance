@@ -31,11 +31,12 @@ module.exports = function(passport) {
                 user = await User.create(newUser)
                 done(null, user)
             }
+            console.log(user)
         } catch (err) {
             console.error(err)
         }
         console.log(profile)
-        console.log(user)
+        
     }))
 
     // Serialize/Deserialize = telling Passport how to save a User:
