@@ -45,14 +45,19 @@ module.exports = {
 
         // This week's number of entries:
             var count = 0;
-            var thisWeekNum = userEntries[0].thisWeekNum
-            var getThisWeekNum = function() {
-                for (let i=0; i < userEntries.length; i++) {
-                    if (userEntries[i].week == thisWeekNum) {
-                        count++
+            if (userEntries.length == 0) {
+                return 0
+            } 
+            else {
+                var thisWeekNum = userEntries[0].thisWeekNum
+                var getThisWeekNum = function() {
+                    for (let i=0; i < userEntries.length; i++) {
+                        if (userEntries[i].week == thisWeekNum) {
+                            count++
+                        }
                     }
+                    return count;
                 }
-                return count;
             }
 
         // Top Week's number of entries:
