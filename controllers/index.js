@@ -63,6 +63,8 @@ module.exports = {
 
             var thisWeekNum = getThisWeekNum()
 
+            console.log(thisWeekNum)
+
         // Top Week's number of entries:
             var getTopWeekNum = function() {
                 if (userEntries == []) {
