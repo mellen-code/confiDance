@@ -45,7 +45,7 @@ module.exports = {
 
         // This week's number of entries:
             var count = 0;
-            if (userEntries.length == 0) {
+            if (userEntries == []) {
                 return count;
             } 
             else {
@@ -63,6 +63,9 @@ module.exports = {
 
         // Top Week's number of entries:
             var getTopWeekNum = function() {
+                if (userEntries == []) {
+                    return false;
+                }
                 var res = [];
                 for (let item of userEntries) {
                     res.push(item.week)
@@ -88,18 +91,22 @@ module.exports = {
                         }
                     }
 
-                    return maxNum == '' ? 0 : maxNum
+                    return maxNum
                 }
 
         // get top week dates via its num:
             var getTopWeekDate = function() {
                 var topWeekNum = getTopWeekNum()
 
+                if (topWeekNum == false) {
+                    return 'add entry to get top week!'
+                }
+
                 var topWeekObject = userEntries.find(entry => entry.week == topWeekNum)
 
                 console.log(topWeekObject)
 
-                return topWeekObject.truncateThisWeek.toString().slice(4, 15);
+                return `week of ${topWeekObject.truncateThisWeek.toString().slice(4, 15)}`;
             }      
 
             // console.log(getTopWeekDate())
