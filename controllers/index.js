@@ -59,8 +59,6 @@ module.exports = {
                 } 
             }
 
-            var thisWeekNumOfEntries = getThisWeekNum()
-
         // Top Week's number of entries:
             var getTopWeekNum = function() {
                 if (userEntries == []) {
@@ -112,7 +110,7 @@ module.exports = {
             res.render('dashboard', {
                 name: req.user.firstName,
                 stories,
-                thisWeekNumOfEntries,
+                getThisWeekNum,
                 getTopWeekDate,
             })          
             
