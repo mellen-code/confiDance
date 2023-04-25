@@ -41,15 +41,14 @@ module.exports = {
 
             let userEntries = weeks.filter((week) => week.userID == req.user.id)
 
-            // console.log(userEntries)
+            console.log(userEntries)
 
         // This week's number of entries:
-            var count = 0;
-            if (userEntries == []) {
-                return count;
-            } 
-            else {
-                var getThisWeekNum = function() {
+            var getThisWeekNum = function() {
+                var count = 0;
+                if (userEntries == []) {
+                    return count;
+                } else {
                     var thisWeekNum = userEntries[0].thisWeekNum;
                     for (let i=0; i < userEntries.length; i++) {
                         if (userEntries[i].week == thisWeekNum) {
@@ -57,9 +56,10 @@ module.exports = {
                         }
                     }
                     return count;
-                }
-                getThisWeekNum()
+                }  
             }
+
+            var thisWeekNum = getThisWeekNum()
 
         // Top Week's number of entries:
             var getTopWeekNum = function() {
@@ -112,7 +112,7 @@ module.exports = {
             res.render('dashboard', {
                 name: req.user.firstName,
                 stories,
-                count,
+                thisWeekNum,
                 getTopWeekDate,
             })          
             
