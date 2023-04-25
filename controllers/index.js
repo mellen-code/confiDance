@@ -108,9 +108,6 @@ module.exports = {
 
                 return `week of ${topWeekObject.truncateThisWeek.toString().slice(4, 15)}`;
             }      
-
-            // console.log(getTopWeekDate())
-            // console.log(count)
     
             res.render('dashboard', {
                 name: req.user.firstName,
