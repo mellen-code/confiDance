@@ -41,8 +41,6 @@ module.exports = {
 
             let userEntries = weeks.filter((week) => week.userID == req.user.id)
 
-            console.log(userEntries)
-
         // This week's number of entries:
             var getThisWeekNum = function() {
                 var count = 0;
@@ -62,8 +60,6 @@ module.exports = {
             }
 
             var thisWeekNumOfEntries = getThisWeekNum()
-
-            console.log(thisWeekNumOfEntries)
 
         // Top Week's number of entries:
             var getTopWeekNum = function() {
@@ -103,7 +99,7 @@ module.exports = {
                 var topWeekNum = getTopWeekNum()
 
                 if (topWeekNum == false) {
-                    return 'add entry to get top week!'
+                    return 'start adding entries to get top week'
                 }
 
                 var topWeekObject = userEntries.find(entry => entry.week == topWeekNum)
