@@ -22,7 +22,7 @@ Full-stack web app using Node, Express, MongoDB, Passport & GoogleOAuth, Materia
     - I enjoyed digging into MongoDB aggregation to pull Dashboard's weekly numbers
     - Reinforced how useful MVC is when working with multiple features
     - Great learnings on how to incorporate Google OAuth in testing and deployment environments
-    - I purposely didn't use a Materialize template for this project, so I could get hands-on with the template. Will like to experience working with a template on a future project.
+    - I purposely didn't use a Materialize template for this project, so I could get hands-on with the template. Would like to experience working with a template on a future project.
 
 
 
