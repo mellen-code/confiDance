@@ -1,9 +1,11 @@
 # ConfiDance <a href="https://confidance.cyclic.app/" target="_blank">Visit Here</a>
-<!-- <a href="https://ariadne-actress-model.netlify.app/" target="_blank">
-<img src="https://media.giphy.com/media/qSBZ0vMEgivr8G24Ny/giphy.gif" width="80%" margin="auto" alt="link to website"/>
-</a> -->
+<a href="https://confidance.cyclic.app/" target="_blank">
+<img src="[https://media.giphy.com/media/qSBZ0vMEgivr8G24Ny/giphy.gif](https://media.giphy.com/media/OXCaDWUVwy5ViA30od/giphy.gif)" width="80%" margin="auto" alt="link to Confidance application"/>
+</a>
 
 Build self-confidence through movement, journaling, and tracking! 
+Users can login to their account and add, edit and delete public and private journal entries, view their weekly, total and top week numbers, select customized 
+poses, and access dance/movement class VODs. 
 
 Full-stack web app using Node, Express, MongoDB, Passport & GoogleOAuth, Materialize, and Handlebars.
 
@@ -32,10 +34,10 @@ Full-stack web app using Node, Express, MongoDB, Passport & GoogleOAuth, Materia
 
   <tr>
     <td width="50%"  style="align:center;" valign="top">
-<a target="_blank" href="https://mariesmith.me/">mariesmith.me</a>
+<a target="_blank" href="https://praisefolder.cyclic.app/">Praise Folder</a>
         <br />
-      <a target="_blank" href="https://mariesmith.me/">
-            <img src="https://media.giphy.com/media/BXLT2FUtBYmKDGl0nd/giphy.gif" width="100%"  alt="link to my portfolio site"/>
+      <a target="_blank" href="https://praisefolder.cyclic.app/">
+            <img src="https://media.giphy.com/media/bASX2PBLf0hYWCF2lS/giphy.gif" width="100%"  alt="link to praise folder application"/>
         </a>
     </td>
     <td width="50%" valign="top">
