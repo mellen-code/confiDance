@@ -1,6 +1,6 @@
 # ConfiDance <a href="https://confidance.cyclic.app/" target="_blank">Visit Here</a>
 <a href="https://confidance.cyclic.app/" target="_blank">
-<img src="[https://media.giphy.com/media/qSBZ0vMEgivr8G24Ny/giphy.gif](https://media.giphy.com/media/OXCaDWUVwy5ViA30od/giphy.gif)" width="80%" margin="auto" alt="link to Confidance application"/>
+<img src="https://media.giphy.com/media/OXCaDWUVwy5ViA30od/giphy.gif" width="80%" margin="auto" alt="link to Confidance application"/>
 </a>
 
 Build self-confidence through movement, journaling, and tracking! 
