@@ -112,7 +112,8 @@ module.exports = {
                 stories,
                 getThisWeekNum,
                 getTopWeekDate,
-            })          
+            })       
+            
             
         } catch (error) {
             console.error(error)
