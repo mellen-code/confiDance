@@ -25,9 +25,9 @@ module.exports = {
                 [
                 {
                     $project: {
-                        week: { $week: "$createdAt"},
+                        week: { $isoweek: "$createdAt"},
                         thisWeek: { date: new Date() },
-                        thisWeekNum: { $week: new Date()},
+                        thisWeekNum: { $isoweek: new Date()},
                         truncateThisWeek: {
                             $dateTrunc: {
                             date: "$createdAt", unit: "week", binSize: 1, 
@@ -102,7 +102,7 @@ module.exports = {
 
                 var topWeekObject = userEntries.find(entry => entry.week == topWeekNum)
 
-                console.log(topWeekObject)
+                // console.log(topWeekObject)
 
                 return `week of ${topWeekObject.truncateThisWeek.toString().slice(4, 15)}`;
             }      
@@ -112,7 +112,7 @@ module.exports = {
                 stories,
                 getThisWeekNum,
                 getTopWeekDate,
-            })       
+            }) 
             
             
         } catch (error) {
