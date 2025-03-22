@@ -100,7 +100,7 @@ app.use('/classes', classesRoutes);
 app.use('/postures', posturesRoutes);
 
 
-// const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
 connectDB().then(() => {
     app.listen(process.env.PORT, () => {
