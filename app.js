@@ -100,14 +100,17 @@ app.use('/classes', classesRoutes);
 app.use('/postures', posturesRoutes);
 
 
-const PORT = process.env.PORT || 3000
+// const PORT = process.env.PORT || 3000
 
-// connectDB().then(() => {
-//     app.listen(process.env.PORT, () => {
-//         console.log(`Server running on ${process.env.NODE_ENV}, you better catch it!`
-//         );
-//     });
-// });
-app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
+connectDB().then(() => {
+    app.listen(process.env.PORT, () => {
+        console.log(`Server running on ${process.env.NODE_ENV}, you better catch it!`
+        );
+    });
+});
+// app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
 
-console.log('testing')
+// console.log('testing')
+
+// const Story = require('./models/Story')
+// console.log(Story)
