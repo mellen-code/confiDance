@@ -25,9 +25,9 @@ module.exports = {
                 [
                 {
                     $project: {
-                        week: { $isoweek: "$createdAt"},
+                        week: { $week: "$createdAt"},
                         thisWeek: { date: new Date() },
-                        thisWeekNum: { $isoweek: new Date()},
+                        thisWeekNum: { $week: new Date()},
                         truncateThisWeek: {
                             $dateTrunc: {
                             date: "$createdAt", unit: "week", binSize: 1, 
